@@ -29,7 +29,12 @@ def find_related_cols_by_name(dataframe_list, relationship_dict=None):
 def find_related_cols_by_content(dataframe_list, relationship_dict=None):
     # dataframe_list
     #     List of pandas dataframe objects
-    #
+    with open('airlines.csv', 'r') as f:
+        airlines = f.read()
+    with open ('airports.csv', 'r') as j:
+        airports = j.read()
+    with open('flights.csv', 'r') as g:
+        flights = g.read()
     # relationship_dict
     #     This is an existing relationship_dict.  If None, a new
     #     relationship_dict should be created
